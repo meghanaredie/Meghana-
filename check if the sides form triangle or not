@@ -1,0 +1,14 @@
+A,B,C= list(map(int,input().split()))
+if (A + B <= C) or (A + C <= B) or (B + C <= A) : 
+        PRINT("no")
+else: 
+        print("yes")    
+        
+        
+        \\\Given 3 numbers A,B,C find if they can form the sides of a triangle.
+Input Size : A,B,C <= 100000
+Sample Testcase :
+INPUT
+3 4 5
+OUTPUT
+yes\\\
