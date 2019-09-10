@@ -1,0 +1,17 @@
+import math
+N,M=map(int,input().split())
+mul = N*M
+root = math.sqrt(mul)
+if int(root + 0.5) ** 2 == mul:
+    print("yes")
+else:
+    print( "no")
+    
+    \\import math
+N,M=map(int,input().split())
+mul = N*M
+root = math.sqrt(mul)
+if int(root + 0.5) ** 2 == mul:
+    print("yes")
+else:
+    print( "no")\\
