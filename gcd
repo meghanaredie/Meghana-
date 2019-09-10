@@ -1,0 +1,8 @@
+def gcd(N,M):
+    if(M==0):
+        return N
+    else:
+        return gcd(M,N%M)
+N,M= list(map(int,input().split()))
+GCD=gcd(N,M)
+print(GCD)
