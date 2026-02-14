@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meghana ❤️ Bhargav</title>
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(to bottom right,#ff758c,#ff7eb3);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+}
+button{
+margin-top:20px;
+padding:12px 25px;
+font-size:20px;
+border:none;
+border-radius:25px;
+background:white;
+color:#ff4b7d;
+}
+.hidden{display:none;}
+</style>
+</head>
+<body>
+<div>
+<h1>Meghana ❤️ Bhargav</h1>
+<h2>Will you be my Valentine?</h2>
+<form id="form">
+<label><input type="radio" name="answer" value="yes" required> Yes ❤️</label>
+<br><br>
+<label><input type="radio" name="answer" value="no"> No 😢</label>
+<br>
+<button type="submit">Submit ❤️</button>
+</form>
+<div id="sad" class="hidden">
+<h2>😢 No is not allowed</h2>
+<label><input type="radio" onclick="go()"> Definitely Yes ❤️</label>
+<br><br>
+<label><input type="radio" onclick="go()"> No other option 😍</label>
+</div>
+</div>
+<script>
+document.getElementById("form").onsubmit=function(e){
+e.preventDefault();
+var answer=document.querySelector('input[name="answer"]:checked').value;
+if(answer==="yes"){go();}
+else{document.getElementById("sad").classList.remove("hidden");}
+};
+function go(){window.location.href="love.html";}
+</script>
+</body>
+</html>
