@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love ❤️</title>
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(to bottom right,#ff758c,#ff7eb3);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+.typing{
+font-size:30px;
+border-right:3px solid white;
+padding-right:5px;
+animation:blink 1s infinite;
+}
+@keyframes blink{
+50%{border-color:transparent;}
+}
+.heart{
+position:fixed;
+animation:float 4s linear infinite;
+}
+@keyframes float{
+from{transform:translateY(100vh);}
+to{transform:translateY(-10vh);}
+}
+</style>
+</head>
+<body>
+<div>
+<div id="text" class="typing"></div>
+<h2>loooooovvvuuuu Bhargav ❤️</h2>
+</div>
+<script>
+var msg="You are my forever ❤️";
+var i=0;
+function type(){
+if(i<msg.length){
+document.getElementById("text").innerHTML+=msg.charAt(i);
+i++;
+setTimeout(type,100);
+}else{
+setInterval(function(){
+var h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),4000);
+},300);
+}}
+type();
+</script>
+</body>
+</html>
